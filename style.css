@@ -3,6 +3,15 @@
     font-family: 'cake';
     src: url(fonte/Cream\ Cake.otf) format(opentype);
 }
+@font-face {
+    font-family: 'raleway';
+    src: url(fonte/static/Raleway-Regular.ttf) format(truetype), url(fonte/static/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(fonte/static/Quicksand-Medium.ttf) format(truetype);
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&display=swap');
@@ -21,12 +30,18 @@
     padding: 0px;
 }
 
+::-webkit-scrollbar{
+    height: 0px;
+    width: 0px;
+}
+
 header{
     background: var(--cor2) url(imagens/bg-header.jpg) center center no-repeat fixed;
     background-size: cover;
     color: white;
     font-family: 'cake', sans-serif;
     height: 100vh;
+    box-shadow: inset 1px 1px 35px black;
 }
 
 /*header img, h1{
@@ -44,11 +59,11 @@ header{
 header h1{
     position: absolute;
     display: inline;
-    color: var(--cor1);
+    color: white;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.589);
    /*margin: 10px;*/
     font-weight: normal;
-    font-size: 6vw;
+    font-size: 7vw;
     transform: translate(7vw, 8vh);
     /*background-color: rgba(0, 0, 0, 0.733);
     border-radius: 15px;
@@ -57,14 +72,13 @@ header h1{
 
 
 header nav{
-    position: absolute;
-    font-size: 3vw;
-    transform: translate(60vw, 8vh);
+    font-size: 2em;
+    text-align: right;
+    padding-top: 50px;
 }
 
 
 header a{
-    position: relative;
     color: white;
     text-shadow: 0px 0px 2px black;
     padding: 8px;
@@ -78,9 +92,136 @@ header a:hover{
     transition: transform, background-color  .5s;
 }
 
+section{
+    margin: 15px;
+}
+
+
 main p{
-    text-align: justify;
-    font-size: 3vw;
+    text-indent: 15px;
+    font-size: 1.5em;
     font-family: 'Quicksand', serif;
     font-weight: normal;
+    margin: 80px 0px 80px 0px;
+}
+
+main h2{
+    font-family: 'raleway', sans-serif;
+    margin: 60px 0px 30px 0px;
+    font-variant: small-caps;
+    padding: 20px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px black;
+}
+
+#prato{
+    background: var(--cor3) url(imagens/prato-flipado.png) bottom right no-repeat fixed;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: inset 1px 1px 35px rgba(0, 0, 0, 0.541);
+}
+
+.desc{
+    text-align: justify;
+    color: white;
+    max-width: 500px;
+    margin: 15px;
+    padding: 15px;
+}
+
+p.desc{
+    background-color: rgba(0, 0, 0, 0.479);
+    border-radius: 15px;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 0px;
+}
+
+#horario{
+    background: white;
+    margin: 0px;
+}
+
+#horario h2{
+    text-shadow: none;
+    font-family: 'raleway', sans-serif;
+    font-variant: small-caps;
+    color: black;
+    padding-top: 50px;
+    margin: 0px;
+    text-align: center;
+}
+
+ul{
+    font-size: 2vw;
+    padding: 25px;
+    columns: 2;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    list-style-position: inside;
+    text-align: justify;
+    margin-left: 30px;
+    line-height: 80px;
+}
+
+li{
+    padding-bottom: 35px;
+}
+
+#horario a{
+    color: black;
+    text-decoration: none;
+}
+
+#horario a:hover{
+    text-decoration: underline;
+}
+
+#horario p{
+    text-align: justify;
+    color: black;
+    margin: 0px;
+    padding: 10px;
+}
+
+#eventos{
+    margin: 0px;
+    background: var(--cor3);
+}
+
+#eventos h2{
+    color: white;
+    margin: 0px;
+    text-shadow: none;
+}
+
+#eventos p{
+    color: white;
+    max-width: 1000px;
+    margin-left: 80px;
+    margin-bottom: 0px;
+    padding-bottom: 35px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-family: 'raleway', sans-serif;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0px;
+}
+
+footer p{
+    padding: 15px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+footer a:hover{
+    text-decoration: underline;
 }
